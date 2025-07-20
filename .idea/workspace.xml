@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87a3ea7b-72e7-4274-b6bf-d2299d6bacd7" name="更改" comment="" />
+    <list default="true" id="87a3ea7b-72e7-4274-b6bf-d2299d6bacd7" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/app/routers/telegram_client_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/telegram_client_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/__init__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,11 +47,14 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "FastAPI.TelegramCrawler.executor": "Run",
+    "HTTP 请求.test_main | #2.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/Program Files/Projects/PyCharmProjects/WebProject/TelegramCrawler/app/main.py",
+    "last_opened_file_path": "E:/Program Files/Projects/PyCharmProjects/PythonProject/TelegramApi",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +72,10 @@
       <recent name="E:\Program Files\Projects\PyCharmProjects\WebProject\TelegramCrawler\app" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="FastAPI.TelegramCrawler">
+    <configuration name="test_main | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test_main.http" executionIdentifier="#2" index="2" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
     <configuration name="TelegramCrawler" type="Python.FastAPI">
       <option name="file" value="E:\Program Files\Projects\PyCharmProjects\WebProject\TelegramCrawler\app\main.py" />
       <module name="TelegramCrawler" />
@@ -76,6 +92,11 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP 请求.test_main | #2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752930344334</updated>
-      <workItem from="1752930345454" duration="21510000" />
+      <workItem from="1752930345454" duration="38022000" />
     </task>
     <servers />
   </component>
@@ -101,6 +122,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TelegramCrawler$TelegramCrawler.coverage" NAME="TelegramCrawler 覆盖结果" MODIFIED="1753002840043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/TelegramCrawler$main.coverage" NAME="main 覆盖结果" MODIFIED="1753027585385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/TelegramCrawler$TelegramCrawler.coverage" NAME="TelegramCrawler 覆盖结果" MODIFIED="1753030755785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

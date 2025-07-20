@@ -13,8 +13,10 @@ class Settings(BaseSettings):
     db_name: str = "telegram_crawler"
 
     class Config:
+        env_prefix = "DB_"
         env_file = ".env"
         env_file_encoding = "utf-8"
+        extra = "ignore"  # 关键点：忽略未定义字段
 
 @lru_cache()
 def get_settings() -> Settings:
