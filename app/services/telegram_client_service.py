@@ -186,7 +186,7 @@ class TelegramClientManager:
         }
 
         try:
-            client =await self.get_client()
+            client = await self.get_client()
             status["is_connected"] = await self._is_connected()
 
             if status["is_connected"]:
@@ -231,6 +231,19 @@ class TelegramClientManager:
             finally:
                 self._client = None
 
+    async def logout(self):
+        client = await self.get_client()
+        if client is None:
+            raise RuntimeError("当前没有已连接的客户端，无法注销")
+
+        if client.is_connected():
+            await client.log_out()
+            await client.disconnect()
+            self._client = None
+            return True
+        else:
+            # 客户端存在但未连接，直接置空
+            self._client = None
 
     async def get_client(self) -> TelegramClient:
         """

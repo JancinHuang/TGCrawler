@@ -36,3 +36,24 @@ class MessageRepository:
         if obj:
             self.db.delete(obj)
             self.db.commit()
+
+    def get_message_ids_by_keyword_and_channel(self, keyword: str, channel_id: int) -> list[int]:
+        """
+        根据关键词和频道ID(dialog_id)获取匹配的消息ID列表
+
+        Args:
+            keyword: 要搜索的关键词
+            channel_id: 频道/对话的ID(dialog_id)
+
+        Returns:
+            匹配的消息ID列表
+        """
+        results = (
+            self.db.query(Message.message_id)
+            .filter(
+                Message.dialog_id == channel_id,
+                Message.message.contains(keyword)
+            )
+            .all()
+        )
+        return [result[0] for result in results]

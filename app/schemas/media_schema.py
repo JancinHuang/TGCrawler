@@ -3,6 +3,7 @@ from typing import Optional
 from datetime import datetime
 from enum import Enum
 
+
 class MediaTypeEnum(str, Enum):
     photo = "photo"
     video = "video"
@@ -14,8 +15,10 @@ class MediaTypeEnum(str, Enum):
     poll = "poll"
     webpage = "webpage"
 
+
 class MediaBase(BaseModel):
     message_id: int
+    dialog_id: int
     media_type: MediaTypeEnum
     mime_type: Optional[str] = None
     file_name: Optional[str] = None
@@ -25,11 +28,14 @@ class MediaBase(BaseModel):
     duration: Optional[int] = None
     size: Optional[int] = None
 
+
 class MediaCreate(MediaBase):
     pass
 
+
 class MediaUpdate(MediaBase):
     pass
+
 
 class MediaInDBBase(MediaBase):
     id: int
@@ -37,6 +43,7 @@ class MediaInDBBase(MediaBase):
 
     class Config:
         orm_mode = True
+
 
 class Media(MediaInDBBase):
     pass

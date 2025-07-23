@@ -34,7 +34,7 @@ async def get_code(data: PhoneRequest):
         raise HTTPException(400, detail=str(e))
 
 
-@router.post("/complete-login", summary="初次登录，保存session")
+@router.post("/login", summary="初次登录，保存session")
 async def complete_login(data: LoginRequest):
     try:
         session_str = await tg_manager.login_with_code(data.code)
@@ -134,3 +134,12 @@ async def disconnect_telegram():
                 "solution": "请尝试强制重启服务"
             }
         )
+
+
+@router.post("/logout", summary="退出登录")
+async def logout():
+    try:
+        if await tg_manager.logout():
+            return {"status": "退出登录成功"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Logout failed: {e}")

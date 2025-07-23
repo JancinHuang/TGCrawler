@@ -1,7 +1,14 @@
+from typing import List, AsyncGenerator
+
 from sqlalchemy.orm import Session
+import re
+from .telegram_client_service import TelegramClientManager
 from ..repositories import MediaRepository
 from ..schemas import MediaCreate, MediaUpdate
 from ..models import Media
+
+manager = TelegramClientManager()
+
 
 class MediaService:
     def __init__(self, db: Session):

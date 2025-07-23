@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87a3ea7b-72e7-4274-b6bf-d2299d6bacd7" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/app/routers/telegram_client_router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/telegram_client_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/media_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/media_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/dialog_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/dialog_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/media_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/media_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/message_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/message_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/dialog_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/dialog_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/message_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/message_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/telegram_client_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/telegram_client_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/media_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/media_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/dialog_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/dialog_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/message_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/message_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/telegram_client_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/telegram_client_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +41,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="305veerBDmwXXPbtd0uI2lFuKpn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,27 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "FastAPI.TelegramCrawler.executor": "Run",
-    "HTTP 请求.test_main | #2.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/Program Files/Projects/PyCharmProjects/PythonProject/TelegramApi",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;FastAPI.TelegramCrawler.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.test_main | #2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.message_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Program Files/Projects/PyCharmProjects/PythonProject/TelegramApi&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Program Files\Projects\PyCharmProjects\WebProject\TelegramCrawler" />
@@ -72,10 +83,7 @@
       <recent name="E:\Program Files\Projects\PyCharmProjects\WebProject\TelegramCrawler\app" />
     </key>
   </component>
-  <component name="RunManager" selected="FastAPI.TelegramCrawler">
-    <configuration name="test_main | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test_main.http" executionIdentifier="#2" index="2" runType="运行单个请求">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="TelegramCrawler" type="Python.FastAPI">
       <option name="file" value="E:\Program Files\Projects\PyCharmProjects\WebProject\TelegramCrawler\app\main.py" />
       <module name="TelegramCrawler" />
@@ -92,11 +100,6 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP 请求.test_main | #2" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -114,7 +117,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752930344334</updated>
-      <workItem from="1752930345454" duration="38022000" />
+      <workItem from="1752930345454" duration="39125000" />
+      <workItem from="1753067578235" duration="18083000" />
+      <workItem from="1753090845040" duration="1513000" />
+      <workItem from="1753092376232" duration="17848000" />
+      <workItem from="1753111906551" duration="4790000" />
+      <workItem from="1753274033752" duration="453000" />
     </task>
     <servers />
   </component>
@@ -123,6 +131,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TelegramCrawler$main.coverage" NAME="main 覆盖结果" MODIFIED="1753027585385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/TelegramCrawler$TelegramCrawler.coverage" NAME="TelegramCrawler 覆盖结果" MODIFIED="1753030755785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/TelegramCrawler$test.coverage" NAME="test 覆盖结果" MODIFIED="1753093698661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TelegramCrawler$TelegramCrawler.coverage" NAME="TelegramCrawler 覆盖结果" MODIFIED="1753117342263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/TelegramCrawler$message_service.coverage" NAME="message_service 覆盖结果" MODIFIED="1753093963608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/services" />
   </component>
 </project>

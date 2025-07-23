@@ -8,6 +8,14 @@ from ..database import get_db
 
 router = APIRouter(prefix="/dialogs", tags=["dialogs"])
 
+
+@router.get("/get_all_dialogs", response_model=List[Dialog])
+async def get_all_dialogs(db: Session = Depends(get_db)):
+    service = DialogService(db)
+    dialogs = await service.get_all_dialogs()
+    return dialogs
+
+
 @router.get("/{dialog_id}/{telegram_type}", response_model=Dialog)
 def read_dialog(dialog_id: int, telegram_type: str, db: Session = Depends(get_db)):
     service = DialogService(db)
@@ -15,6 +23,7 @@ def read_dialog(dialog_id: int, telegram_type: str, db: Session = Depends(get_db
     if not db_obj:
         raise HTTPException(status_code=404, detail="Dialog not found")
     return db_obj
+
 
 @router.post("/", response_model=Dialog)
 def create_dialog(dialog_in: DialogCreate, db: Session = Depends(get_db)):
@@ -24,6 +33,7 @@ def create_dialog(dialog_in: DialogCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Dialog already exists")
     return service.create(dialog_in)
 
+
 @router.put("/{id}", response_model=Dialog)
 def update_dialog(id: int, dialog_in: DialogUpdate, db: Session = Depends(get_db)):
     service = DialogService(db)
@@ -31,6 +41,7 @@ def update_dialog(id: int, dialog_in: DialogUpdate, db: Session = Depends(get_db
     if not db_obj:
         raise HTTPException(status_code=404, detail="Dialog not found")
     return service.update(db_obj, dialog_in)
+
 
 @router.delete("/{id}", status_code=204)
 def delete_dialog(id: int, db: Session = Depends(get_db)):

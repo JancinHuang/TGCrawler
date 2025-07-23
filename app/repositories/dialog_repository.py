@@ -1,10 +1,20 @@
+from typing import Optional
+
 from sqlalchemy.orm import Session
 from ..models import Dialog
 from ..schemas import DialogCreate, DialogUpdate
+from ..schemas.dialog_schema import TelegramTypeEnum
+
 
 class DialogRepository:
     def __init__(self, db: Session):
         self.db = db
+
+    def get_all(self) -> list[Dialog]:
+        return self.db.query(Dialog).all()
+
+    def get_by_dialog_id_and_type(self, dialog_id: int, telegram_type: TelegramTypeEnum) -> Optional[Dialog]:
+        return self.db.query(Dialog).filter_by(dialog_id=dialog_id, telegram_type=telegram_type).first()
 
     def get_by_id(self, id: int) -> Dialog | None:
         return self.db.query(Dialog).filter(Dialog.id == id).first()
@@ -22,6 +32,7 @@ class DialogRepository:
         self.db.commit()
         self.db.refresh(obj)
         return obj
+
 
     def update(self, db_obj: Dialog, obj_in: DialogUpdate) -> Dialog:
         obj_data = obj_in.dict(exclude_unset=True)

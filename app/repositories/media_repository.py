@@ -1,6 +1,9 @@
+from typing import Optional, Tuple, List
+
 from sqlalchemy.orm import Session
 from ..models import Media
 from ..schemas import MediaCreate, MediaUpdate
+
 
 class MediaRepository:
     def __init__(self, db: Session):
@@ -29,3 +32,30 @@ class MediaRepository:
         if obj:
             self.db.delete(obj)
             self.db.commit()
+
+    def get_by_message_id(self, message_id: int) -> Optional[Media]:
+        return self.db.query(Media).filter(Media.message_id == message_id).first()
+
+    # 在 MediaRepository 类中添加
+    def exists_by_message_and_duration(
+            self,
+            message_id: int,
+            dialog_id: int,
+            min_duration: int
+    ) -> bool:
+        """
+        检查指定消息是否存在且duration大于阈值
+
+        :param message_id: 消息ID
+        :param dialog_id: 对话ID
+        :param min_duration: 最小duration要求(秒)
+        :return: 是否存在符合条件的记录
+        """
+        return self.db.query(
+            self.db.query(Media)
+            .filter(
+                Media.message_id == message_id,
+                Media.dialog_id == dialog_id,
+                Media.duration > min_duration)
+            .exists()
+        ).scalar()
